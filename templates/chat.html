@@ -44,7 +44,7 @@
         errorArea.textContent = 'We are sorry. Your browser doesn\'t support Web Sockets :(';
         messageBtn.disabled = true;
     } else {
-        socket = new WebSocket('ws://localhost:4000/room');
+        socket = new WebSocket('ws://{{.Host}}/room');
         socket.onopen = () => {
             messageBtn.disabled = false;
         }
